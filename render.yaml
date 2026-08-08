@@ -2,9 +2,9 @@
 # Documentation: https://render.com/docs/blueprint-spec
 
 services:
-  # Option 1: Web Service (Node.js Express Server serving static dist + SPA fallback + Health checks)
+  # Web Service (Node.js Express Server serving static dist + SPA fallback + Health checks)
   - type: web
-    name: the-sanctuary-web
+    name: the-sanctuary
     runtime: node
     region: oregon
     plan: starter
@@ -19,20 +19,4 @@ services:
       - key: GEMINI_API_KEY
         sync: false
       - key: APP_URL
-        sync: false
-
-  # Option 2: Static Site (Pure Render CDN static hosting)
-  - type: static
-    name: the-sanctuary-static
-    region: oregon
-    buildCommand: npm run build
-    staticPublishPath: ./dist
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
-    envVars:
-      - key: NODE_ENV
-        value: production
-      - key: GEMINI_API_KEY
         sync: false
