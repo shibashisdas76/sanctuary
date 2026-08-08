@@ -1,0 +1,6 @@
+{
+  "name": "The Sanctuary",
+  "description": "A serene mental health and reflection app built with offline-first local database persistence and robust image caching.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
