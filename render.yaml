@@ -2,12 +2,12 @@
 # Documentation: https://render.com/docs/blueprint-spec
 
 services:
-  # Web Service (Node.js Express Server serving static dist + SPA fallback + Health checks)
+  # Web Service (100% Free Instance Plan)
   - type: web
     name: the-sanctuary
     runtime: node
     region: oregon
-    plan: starter
+    plan: free
     buildCommand: npm run build
     startCommand: npm start
     healthCheckPath: /healthz
